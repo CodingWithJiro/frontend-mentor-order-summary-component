@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary Component</title>
+    <meta name="author" content="Elmar Chavez" />
+    <meta name="description"
+        content="A responsive order summary component built with HTML and CSS as part of a Frontend Mentor challenge. Created during the author's fourth month learning frontend web development." />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <meta property="og:site_name" content="CodingWithJiro" />
+    <meta property="og:title" content="Order Summary Component" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="A responsive order summary component built with HTML and CSS for a Frontend Mentor challenge. Created during the author's fourth month learning frontend web development." />
+
+    <meta property="og:url" content="ADD_LINK_HERE" />
+
+    <meta property="og:image" content="ADD_LINK_HERE/assets/img/site-preview-meta_1200x630.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Order Summary Component" />
+    <meta name="twitter:description"
+        content="Responsive order summary card built with HTML and CSS for a Frontend Mentor challenge. Made in my 4th month of learning frontend. #HTML #CSS #FrontendMentor #WebDev" />
+
+    <meta name="twitter:image" content="ADD_LINK_HERE/assets/img/site-preview-meta_1200x630.png" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#e0e8ff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <a class="sr-only" href="#main" aria-label="Skip to main content">
+            Go directly to the main content of the page.
+        </a>
+    </header>
+
+    <main class="main" id="main">
+        <div class="main__container">
+            <article class="card" aria-labelledby="card__title">
+                <img src="./assets/img/illustration-hero_450x220.svg"
+                    alt="2D graphic of a person dancing and listening to music." class="card__hero" width="450"
+                    height="220">
+
+                <div class="card__info">
+                    <h1 class="card__title" id="card__title">
+                        Order Summary
+                    </h1>
+
+                    <p class="card__tagline">
+                        You can now listen to millions of songs, audiobooks, and podcasts on any
+                        device anywhere you like!
+                    </p>
+
+                    <div class="card__plan">
+                        <div class="card__wrapper">
+                            <img src="./assets/icons/icon-music_48x48.svg" alt="" class="card__icon" width="48"
+                                height="48" aria-hidden="true">
+
+                            <div class="card__current-plan">
+                                <p class="card__name">
+                                    Annual Plan
+                                </p>
+
+                                <p class="card__rate">
+                                    $59.99/year
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="#change-link" class="card__change" title="Change your current plan"
+                            aria-label="Change your current plan">
+                            Change
+                        </a>
+                    </div>
+
+                    <div class="card__cta">
+                        <button class="card__proceed" type="button" title="Click to proceed with your order payment">
+                            Proceed to Payment
+                        </button>
+
+                        <a href="#cancel-link" class="card__cancel" title="Cancel current order transaction">
+                            Cancel Order
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <picture class="main__picture">
+            <source media="(min-width: 48rem) and (prefers-color-scheme: light)"
+                srcset="./assets/img/pattern-background-desktop_1440x437.svg" type="image/svg+xml">
+
+            <source media="(min-width: 48rem) and (prefers-color-scheme: dark)"
+                srcset="./assets/img/pattern-background-desktop-dark_1440x437.svg" type="image/svg+xml">
+
+            <source media="(prefers-color-scheme: dark)"
+                srcset="./assets/img/pattern-background-mobile-dark_375x194.svg" type="image/svg+xml">
+
+            <img src="./assets/img/pattern-background-mobile_375x194.svg" alt="" aria-hidden="true" class="main__design"
+                type="image/svg+xml">
+        </picture>
+    </main>
+</body>
+
+</html>

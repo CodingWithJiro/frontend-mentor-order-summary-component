@@ -1,0 +1,404 @@
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* || FONTS */
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/red-hat-display-v20-latin-500.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/red-hat-display-v20-latin-700.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/red-hat-display-v20-latin-900.woff2")
+    format("woff2");
+}
+
+/* || VARIABLES */
+/* CHANGE THE DATA BELOW AS NEEDED */
+:root {
+  /* FONTS */
+  --FF: "Red Hat Display", sans-serif;
+  --FS: 1rem;
+
+  /* COLORS */
+  --BGCOLOR: hsl(225, 100%, 94%);
+  --BGCOLOR-CARD: hsl(225, 100%, 98%);
+  --BGCOLOR-CARD-PLAN: hsla(225, 100%, 94%, 0.3);
+  --BGCOLOR-CARD-PROCEED: hsl(245, 75%, 52%);
+  --BGCOLOR-CARD-PROCEED-HOVER: #766cf1;
+  --FONT-COLOR: hsl(224, 23%, 55%);
+  --FONT-COLOR-CARD-TITLE: hsl(223, 47%, 23%);
+  --FONT-COLOR-CARD-NAME: hsl(223, 47%, 23%);
+  --FONT-COLOR-CARD-CHANGE: hsl(245, 75%, 52%);
+  --FONT-COLOR-CARD-CHANGE-HOVER: #766cf1;
+  --FONT-COLOR-CARD-PROCEED: hsl(225, 100%, 98%);
+  --FONT-COLOR-CARD-CANCEL-HOVER: hsl(223, 47%, 23%);
+  --BORDER-COLOR-CARD-HERO: hsl(223, 47%, 23%);
+  --SHADOW-COLOR-CARD: #c9d3f8;
+  --SHADOW-COLOR-CARD-PROCEED: hsla(245, 83%, 68%, 0.5);
+
+  /* BORDERS */
+  --BORDER-CARD-HERO: 1px solid var(--BORDER-COLOR-CARD-HERO);
+
+  /* SHADOWS */
+  --BOX-SHADOW-CARD: 0 10px 25px var(--SHADOW-COLOR-CARD);
+  --BOX-SHADOW-CARD-PROCEED: 0 10px 25px var(--SHADOW-COLOR-CARD-PROCEED);
+}
+
+/* || MEDIA QUERY (DARK THEME) */
+/* CHANGE THE DATA BELOW AS NEEDED */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: hsl(220, 15%, 10%);
+    --BGCOLOR-CARD: hsl(225, 15%, 15%);
+    --BGCOLOR-CARD-PLAN: hsla(225, 15%, 30%, 0.3);
+    --BGCOLOR-CARD-PROCEED: hsl(245, 85%, 60%);
+    --BGCOLOR-CARD-PROCEED-HOVER: hsl(245, 100%, 70%);
+    --FONT-COLOR: hsl(220, 10%, 75%);
+    --FONT-COLOR-CARD-TITLE: hsl(220, 15%, 90%);
+    --FONT-COLOR-CARD-NAME: hsl(220, 15%, 90%);
+    --FONT-COLOR-CARD-CHANGE: hsl(245, 100%, 75%);
+    --FONT-COLOR-CARD-CHANGE-HOVER: hsl(245, 100%, 85%);
+    --FONT-COLOR-CARD-PROCEED: hsl(0, 0%, 100%);
+    --FONT-COLOR-CARD-CANCEL-HOVER: hsl(0, 0%, 100%);
+    --BORDER-COLOR-CARD-HERO: hsl(220, 15%, 30%);
+    --SHADOW-COLOR-CARD: rgba(0, 0, 0, 0.5);
+    --SHADOW-COLOR-CARD-PROCEED: hsla(245, 100%, 75%, 0.3);
+  }
+}
+
+/* || UTILITY CLASSES */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+/* || GENERAL STYLES */
+html {
+  font-size: var(--FS);
+  font-family: var(--FF);
+  font-weight: 500;
+  background-color: var(--BGCOLOR);
+}
+
+body {
+  color: var(--FONT-COLOR);
+  min-height: 100vh;
+}
+
+/* || MAIN */
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main__container {
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.main__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main__design {
+  width: 100%;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: var(--BGCOLOR-CARD);
+  box-shadow: var(--BOX-SHADOW-CARD);
+}
+
+.card__hero {
+  border-radius: 20px 20px 0 0;
+  border: var(--BORDER-CARD-HERO);
+  width: 100%;
+}
+
+.card__info {
+  border-radius: 0 0 20px 20px;
+  padding: 1.5em 0.75em;
+}
+
+.card__title {
+  text-align: center;
+  font-weight: 900;
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  margin-bottom: 0.7em;
+  color: var(--FONT-COLOR-CARD-TITLE);
+}
+
+.card__tagline {
+  text-align: center;
+  max-width: 16rem;
+  margin: 0 auto 1.625em;
+  font-size: 0.962rem;
+  line-height: 1.6;
+}
+
+.card__plan {
+  background-color: var(--BGCOLOR-CARD-PLAN);
+  border-radius: 12px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6em;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.card__current-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.card__name {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--FONT-COLOR-CARD-NAME);
+}
+
+.card__rate {
+  font-size: 0.75rem;
+}
+
+.card__change {
+  color: var(--FONT-COLOR-CARD-CHANGE);
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-decoration: underline;
+  outline-offset: 5px;
+}
+
+.card__change:hover,
+.card__change:focus-visible {
+  color: var(--FONT-COLOR-CARD-CHANGE-HOVER);
+  text-decoration: none;
+}
+
+.card__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__proceed {
+  background-color: var(--BGCOLOR-CARD-PROCEED);
+  color: var(--FONT-COLOR-CARD-PROCEED);
+  box-shadow: var(--BOX-SHADOW-CARD-PROCEED);
+  padding: 0.925em;
+  border-radius: 12px;
+  font-weight: 700;
+  width: 100%;
+  font-size: 0.985rem;
+  outline-offset: 5px;
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 1.5em;
+}
+
+.card__proceed:hover,
+.card__proceed:focus-visible {
+  background-color: var(--BGCOLOR-CARD-PROCEED-HOVER);
+  transform: scale(1.025);
+}
+
+.card__cancel {
+  font-weight: 700;
+  font-size: 0.965rem;
+  outline-offset: 5px;
+}
+
+.card__cancel:hover,
+.card__cancel:focus-visible {
+  color: var(--FONT-COLOR-CARD-CANCEL-HOVER);
+}
+
+/* || MEDIA QUERY (DEVICE WIDTH) */
+@media screen and (min-width: 23.4375rem) {
+  /* || MAIN */
+  .main__container {
+    padding: 1.5rem;
+  }
+
+  .card__info {
+    padding: 2em 1.5em;
+  }
+
+  .card__wrapper {
+    gap: 1.25em;
+  }
+
+  .card__name {
+    font-size: 0.925rem;
+  }
+
+  .card__rate {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  /* || MAIN */
+  .card__info {
+    padding: 2.75em 3em 3em;
+  }
+
+  .card__title {
+    margin-bottom: 0.65em;
+  }
+
+  .card__tagline {
+    max-width: 20rem;
+    margin: 0 auto 1.3em;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .card__plan {
+    padding: 1.5em;
+    margin-bottom: 2.05em;
+  }
+
+  .card__name {
+    font-size: 1.05rem;
+  }
+
+  .card__rate {
+    font-size: 1.05rem;
+  }
+
+  .card__change {
+    font-size: 0.9rem;
+  }
+
+  .card__proceed {
+    margin-bottom: 2em;
+  }
+}
+
+/* || MEDIA QUERY (REDUCED MOTION) */
+/* CHANGE THE DATA BELOW AS NEEDED */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out, color 0.15s ease-in-out;
+  }
+
+  .card {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card__plan {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card__proceed {
+    transition: background-color 0.3s ease-in-out, color 0.15s ease-in-out,
+      box-shadow 0.3s ease-in-out, transform 0.15s ease-in-out;
+  }
+
+  .card__title,
+  .card__name,
+  .card__change,
+  .card__cancel {
+    transition: color 0.15s ease-in-out;
+  }
+
+  .card__hero {
+    transition: border-color 0.3s ease-in-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation: none !important;
+
+    transition-duration: 0.001ms !important;
+    transition-delay: 0.001ms !important;
+    transition: none !important;
+
+    caret-color: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
