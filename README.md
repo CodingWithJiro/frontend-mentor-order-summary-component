@@ -16,6 +16,7 @@
 ![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34dc8bb6-b186-4055-afae-b89ee5937a04/deploy-status)](https://order-summary-component-fm-jiro.netlify.app/)
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
 
@@ -90,7 +91,7 @@ The design is responsive across breakpoints and supports light and dark themes t
 
 ## 🌐 Live Demo
 
-Or you can check out the 👉 [live website here](LINK)
+Or you can check out the 👉 [live website here](https://order-summary-component-fm-jiro.netlify.app/)
 
 ---
 
@@ -107,10 +108,3 @@ Created by **Elmar Chavez**
 🗓️ Month/Year: **July 2025**
 
 📚 Journey: **4<sup>th</sup>** month of learning _frontend web development_.
-
-<!--
-
-FRONTEND MENTOR TAGS:
-html css vscode git github netlify 4th-month frontend-mentor project perfectpixel lighthouse
-
--->
