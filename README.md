@@ -19,6 +19,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/34dc8bb6-b186-4055-afae-b89ee5937a04/deploy-status)](https://order-summary-component-fm-jiro.netlify.app/)
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
+![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.frontend-mentor-order-summary-component&left_text=repo%20views)
 
 ## ℹ️ A Responsive Order Summary Component for a Radio Web App
 
